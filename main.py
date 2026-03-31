@@ -61,7 +61,7 @@ def roll_dice(num_dice, num_sides, bonus=0, zero_based=False):
         json.dump(rlist, f, indent=4)
 
 if sys.argv[1] == 'log':
-    with open('log.json', 'r') as f:
+    with open('log.json', 'a') as f:
         data = json.load(f)
         print(json.dumps(data, indent=4))
     sys.exit(1)
